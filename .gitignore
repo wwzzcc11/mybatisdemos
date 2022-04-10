@@ -1,0 +1,4 @@
+# Project exclude paths
+/moretomore/target/
+/oneTomore/target/
+/oneToone/target/

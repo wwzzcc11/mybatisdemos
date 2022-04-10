@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.gdpu.mybatisdemo.dao.CardMapper">
+    <select id="queryCardById" resultType="idCard">
+        select * from idcard where id=#{id}
+    </select>
+
+    <insert id="addCard" parameterType="idCard">
+        insert into idcard values (#{id},#{number})
+    </insert>
+    <update id="updateCard" parameterType="idCard">
+        update idcard set `number`=#{number}where id=#{id}
+    </update>
+    <delete id="deleteCardById" >
+        delete from idcard where id=#{id}
+    </delete>
+
+</mapper>
